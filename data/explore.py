@@ -1,3 +1,8 @@
+# Self-Assessment Questions
+# 1. The boolean filter acts as a true or false checklist for every row in a table.
+# 2. The difference is that df["revenue"] is a series and it is asking pandas for values inside that specifc column. It matters because single brackets will trigger a KeyError. This is because pandas is looking for a single column.
+#    df[["revenue"]] is a dataframe it is passing a list of column names into df[], which tells pandas to slice out smaller sub-table. This is also why it matters.
+# 3. It turns this into a one second task is what I would say.
 # --- Exercise 1: Load it ---
 import pandas as pd
 
