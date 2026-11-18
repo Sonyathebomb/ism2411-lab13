@@ -15,3 +15,20 @@ south = df[df['region'] == 'South']
 print(len(south))
 print(south.head())
 
+# --- Exercise 3: Top 5 by revenue ---
+top_5 = df.sort_values('revenue', ascending=False).head(5)
+print(top_5)
+
+# --- Exercise 4: Two condition filter ---
+big_south = df[(df['region'] == 'South') & (df['revenue'] > 1000)]
+print(len(big_south))
+print(big_south.head())
+
+# --- Exercise 5: A new column ---
+df['per_unit'] = df['revenue'] / df['quantity']
+print(df.head())
+print(df['per_unit'].mean())
+
+# --- Exercise 6: Unique values ---
+print(df['region'].unique())
+print(df['region'].value_counts())
