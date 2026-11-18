@@ -32,3 +32,11 @@ print(df['per_unit'].mean())
 # --- Exercise 6: Unique values ---
 print(df['region'].unique())
 print(df['region'].value_counts())
+
+# --- Exercise 7: Select columns ---
+df_subset = df[['region','product','revenue']]
+
+print(df_subset.shape)
+
+# --- Exercise 8: Save ---
+df.to_csv('data/explored.csv', index=False)
